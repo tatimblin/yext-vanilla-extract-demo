@@ -1,0 +1,88 @@
+{
+  "items": [
+    {
+      "id": 0,
+      "title": "5th Avenue Eau de Parfum (1.0 fl. oz.)",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 25,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/5fA5-eZ2fO9svylqpPRBzmUK9Jp71_97wqqwhA4NCes/2104x2104.jpg"
+    },
+    {
+      "id": 1,
+      "title": "Advanced 60-Piece Youth Restoring Solutions Set",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 33,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/1zcGxIFHNw9q8IrTfk-pTTaayUzX6i1ypN_r_jQDvFQ/2104x2104.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Advanced Ceramide Capsules Daily Youth Restoring Eye Serum (60 Capsules)",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 41,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/zGRaRFKobuecxoKIOBsnGbv0sVhENIUV6Gv9odZgyf0/2104x2104.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Advanced Ceramide Capsules Daily Youth Restoring Serum",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 39,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/itvqth1oIpZm_LaTmOPtrQO5eakpbzqyTcyX-267XLk/1000x1000.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Advanced Ceramide Lift and Firm Day Cream",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 29,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/izmjZ8sqAlXdYmpX8xWZyVqtiPRTNm29nH1T_OWZlOI/535x535.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Advanced Eye-Fix Primer (0.25 fl. oz.)",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 24,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/b0YFrudAfspD_FYb1mZv3UdK2KHI0xVdu_90Ct2Hgfk/2104x2104.jpg"
+    },
+    {
+      "id": 6,
+      "title": "All Gone Eye and Lip Makeup Remover (3.4 fl. oz.)",
+      "description": "Lorem ipsum dolor sit amet",
+      "price": 16,
+      "rating": {
+        "count": 100,
+        "rate": 4.5
+      },
+      "category": "Fragerance",
+      "image": "https://a.mktgcdn.com/p/UJ2gXQHiyExQlFKR8EUafy4k8WpQW44pX4BWzKB9ikM/2104x2104.jpg"
+    }
+  ]
+}

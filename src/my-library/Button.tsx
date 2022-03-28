@@ -1,8 +1,8 @@
-import { buttonStyle } from './styles.css';
-import { Button as Recipe } from '../../design-system/cobalt.css';
+import { buttonStyle } from './Button.css';
+import { Button as Recipe } from '../design-system/cobalt.css';
 
 interface Props {
-  variants: any
+  variants?: any
 }
 
 const Button: React.FC<Props> = ({ variants }) => {

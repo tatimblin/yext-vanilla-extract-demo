@@ -1,13 +1,42 @@
+import { useState, useEffect } from 'react';
 import { themeClass, exampleStyle } from './theme.css';
-import { Button } from './components';
+import logo from './assets/logo.png';
+import { items } from './assets/data.json';
+import { SearchForm, SearchResults } from './components';
+import { Product } from './components/Card';
 
 function App() {
+
+  const products: Product[] = items;
+  const [filtered, setFiltered] = useState(products);
+  const [query, setQuery] = useState<string>('');
+
+  const search = (value: string) => {
+    setQuery(value);
+    const newFilter = products.filter((item) => {
+      return Object.values(item).join(' ').toLowerCase().includes(value.toLowerCase());
+    });
+    setFiltered(newFilter);
+  }
+
   return (
     <div className={themeClass}>
-      <h1 className={exampleStyle}>Hello World</h1>
-      <Button variants={{
-        color: 'brand',
-      }} />
+      <header className="mb-8 border-b border-gray-200">
+        <div className="container mx-auto py-2 flex items-center">
+          <a className="mr-4" href="https://www.revlon.com/" target="_blank">
+            <img src={logo} alt="Go to homepage" className="w-32" />
+          </a>
+          <SearchForm onChange={(e: React.ChangeEvent<HTMLInputElement>) => search(e.target.value)} />
+        </div>
+      </header>
+      <section className="container mx-auto">
+        <SearchResults results={filtered} />
+      </section>
+      <footer className="bg-gray-100 mt-8">
+        <div className="container mx-auto py-4">
+          Copyright © 2022
+        </div>
+      </footer>
     </div>
   );
 };
