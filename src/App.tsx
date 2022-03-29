@@ -22,7 +22,7 @@ function App() {
   return (
     <div className={theme}>
       <header className="mb-8 border-b border-gray-200">
-        <div className="container mx-auto py-2 flex items-center">
+        <div className="container mx-auto py-2 flex items-center bg-brand">
           <a className="mr-4" href="https://www.revlon.com/" target="_blank">
             <img src={logo} alt="Go to homepage" className="w-32" />
           </a>
