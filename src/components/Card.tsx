@@ -30,11 +30,11 @@ const Card: React.FC<IProps> = ({ product }) => {
         })}>
           {product.title}
         </h2>
-        <span className={text({
+        <span className={`text-right block ${text({
           size: 'large',
           weight: 'bold',
-        })}>
-          {product.price}
+        })}`}>
+          ${product.price}.00
         </span>
         <Button
           content="Add To Cart"
