@@ -72,11 +72,38 @@ const colorProperties = defineProperties({
     borderColor: colors,
     backgroundColor: colors,
   }
+});
+
+// Typography
+
+const typeProperties = defineProperties({
+  properties: {
+    fontSize: {
+      xs: '12px',
+      sm: '16px',
+      md: '20px',
+      lg: '24px',
+      xl: '48px',
+    },
+    lineHeight: {
+      xs: '12px',
+      sm: '16px',
+      md: '20px',
+      lg: '24px',
+      xl: '48px',
+    },
+    fontWeight: {
+      light: 300,
+      regular: 400,
+      bold: 700,
+    }
+  }
 })
 
 export const designSystem = createSprinkles(
   responsizeProperties,
   colorProperties,
+  typeProperties,
 );
 
 export type DesignSystem = Parameters<typeof designSystem>[0];

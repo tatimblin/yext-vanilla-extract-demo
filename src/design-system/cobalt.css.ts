@@ -34,4 +34,37 @@ export const button = recipe({
       },
     }
   }
-})
+});
+
+// Text
+
+export const text = recipe({
+  variants: {
+    size: {
+      large: designSystem({
+        fontSize: 'lg',
+        lineHeight: 'xl',
+      }),
+      small: designSystem({
+        fontSize: 'sm',
+        lineHeight: 'sm',
+      }),
+    },
+    weight: {
+      bold: designSystem({
+        fontWeight: 'bold',
+      }),
+    }
+  },
+  compoundVariants: [
+    {
+      variants: {
+        size: 'large',
+        weight: 'bold',
+      },
+      style: designSystem({
+        color: 'gray-500',
+      }),
+    },
+  ],
+});

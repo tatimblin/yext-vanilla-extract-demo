@@ -1,5 +1,5 @@
 import { Button } from '../my-library';
-import { button } from '../design-system/cobalt.css';
+import { button, text } from '../design-system/cobalt.css';
 
 export interface Rating {
   count: number
@@ -25,7 +25,17 @@ const Card: React.FC<IProps> = ({ product }) => {
     <article className="w-full border rounded overflow-hidden">
       <img src={product.image} alt="" />
       <div className="p-4">
-        {product.title}
+        <h2 className={text({
+          weight: 'bold',
+        })}>
+          {product.title}
+        </h2>
+        <span className={text({
+          size: 'large',
+          weight: 'bold',
+        })}>
+          {product.price}
+        </span>
         <Button
           content="Add To Cart"
           className={`mt-4 ${button({
