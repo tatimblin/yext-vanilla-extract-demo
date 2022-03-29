@@ -1,9 +1,9 @@
-import { useState, useEffect } from 'react';
-import { themeClass, exampleStyle } from './theme.css';
-import logo from './assets/logo.png';
+import { useState } from 'react';
 import { items } from './assets/data.json';
 import { SearchForm, SearchResults } from './components';
 import { Product } from './components/Card';
+import { theme } from './design-system/theme.css';
+import logo from './assets/logo.png';
 
 function App() {
 
@@ -20,7 +20,7 @@ function App() {
   }
 
   return (
-    <div className={themeClass}>
+    <div className={theme}>
       <header className="mb-8 border-b border-gray-200">
         <div className="container mx-auto py-2 flex items-center">
           <a className="mr-4" href="https://www.revlon.com/" target="_blank">

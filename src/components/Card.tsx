@@ -1,3 +1,6 @@
+import { Button } from '../my-library';
+import { button } from '../design-system/cobalt.css';
+
 export interface Rating {
   count: number
   rate: number
@@ -23,6 +26,20 @@ const Card: React.FC<IProps> = ({ product }) => {
       <img src={product.image} alt="" />
       <div className="p-4">
         {product.title}
+        <Button
+          content="Add To Cart"
+          className={`mt-4 ${button({
+            color: 'light',
+            size: 'full',
+          })}`}
+        />
+        <Button
+          content="Buy Now"
+          className={`mt-4 ${button({
+            color: 'dark',
+            size: 'full',
+          })}`}
+        />
       </div>
     </article>
   );

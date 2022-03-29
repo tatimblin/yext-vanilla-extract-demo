@@ -1,14 +1,12 @@
-import { buttonStyle } from './Button.css';
-import { Button as Recipe } from '../design-system/cobalt.css';
-
 interface Props {
-  variants?: any
+  content: string
+  className?: any
 }
 
-const Button: React.FC<Props> = ({ variants }) => {
+const Button: React.FC<Props> = ({ className, content }) => {
   return (
-    <button className={`${buttonStyle} ${Recipe(variants)}`}>
-      Click Me!
+    <button className={className}>
+      {content}
     </button>
   );
 };

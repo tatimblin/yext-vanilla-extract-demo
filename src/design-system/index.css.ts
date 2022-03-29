@@ -1,37 +1,81 @@
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
-import Colors from './colors.css';
 
-const space = {
+const spacing = {
   none: 0,
-  small: '4px',
-  medium: '8px',
-  large: '16px',
+  sm: '8px',
+  md: '16px',
+  lg: '32px',
+  xl: '64px',
+  auto: 'auto',
 };
 
-const responsiveProperties = defineProperties({
-  conditions: {
-    mobile: {},
-    tablet: { '@media': 'screen and (min-width: 768px)' },
-    desktop: { '@media': 'screen and (min-width: 1024px)' },
+const sizes = {
+  sm: '1px',
+  md: '3px',
+  lg: '5px',
+  xl: '7px',
+};
+
+const responsizeProperties = defineProperties({
+  properties: {
+    paddingTop: spacing,
+    paddingBottom: spacing,
+    paddingLeft: spacing,
+    paddingRight: spacing,
+    marginTop: spacing,
+    marginBottom: spacing,
+    marginLeft: spacing,
+    marginRight: spacing,
+    borderWidth: sizes,
+    borderRadius: sizes,
   },
-  defaultCondition: 'mobile',
-  properties: {},
+  shorthands: {
+    padding: ['paddingTop', 'paddingBottom', 'paddingLeft', 'paddingRight'],
+    paddingX: ['paddingLeft', 'paddingRight'],
+    paddingY: ['paddingTop', 'paddingBottom'],
+    margin: ['marginTop', 'marginBottom', 'marginLeft', 'marginRight'],
+    marginX: ['marginLeft', 'marginRight'],
+    marginY: ['marginTop', 'marginBottom'],
+  }
 });
+
+// COLORS
+
+const grays = {
+  'gray-50': '#f9fafb',
+  'gray-100': '#f3f4f6',
+  'gray-200': '#e5e7eb',
+  'gray-300': '#d1d5db',
+  'gray-400': '#9ca3af',
+  'gray-500': '#6b7280',
+  'gray-600': '#4b5563',
+  'gray-700': '#374151',
+  'gray-800': '#1f2937',
+  'gray-900': '#111827',
+};
+
+const colors = {
+  ...grays,
+  'brand': '#d31245',
+  'white': '#fff',
+}
 
 const colorProperties = defineProperties({
   conditions: {
-    lightMode: {},
-    darkMode: { '@media': '(prefers-color-scheme: dark)' },
+    default: {},
+    hover: { selector: '&:hover' },
+    focus: { selector: '&:focus' }
   },
-  defaultCondition: 'lightMode',
+  defaultCondition: 'default',
   properties: {
-    color: Colors,
-    background: Colors,
-  },
-});
+    color: colors,
+    borderColor: colors,
+    backgroundColor: colors,
+  }
+})
 
 export const designSystem = createSprinkles(
-  responsiveProperties,
+  responsizeProperties,
   colorProperties,
 );
 
