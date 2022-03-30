@@ -1,3 +1,8 @@
+import resolveConfig from 'tailwindcss/resolveConfig'
+import tailwindConfig from '../../tailwind.config.js' 
+
+const fullConfig = resolveConfig(tailwindConfig)
+
 import { defineProperties, createSprinkles } from '@vanilla-extract/sprinkles';
 
 const spacing = {
@@ -56,7 +61,7 @@ const grays = {
 
 const colors = {
   ...grays,
-  'brand': '#d31245',
+  'brand': fullConfig.theme.colors.brand,
   'white': '#fff',
 }
 
