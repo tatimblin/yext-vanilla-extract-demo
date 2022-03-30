@@ -1,4 +1,4 @@
-import { Button, Heading } from '../my-library';
+import { Button, Heading, Price } from '../my-library';
 import { button, text, heading } from '../design-system/cobalt.css';
 
 export interface Rating {
@@ -34,7 +34,7 @@ const Card: React.FC<IProps> = ({ product }) => {
           size: 'large',
           weight: 'bold',
         })}`}>
-          ${product.price}.00
+          <Price>{product.price}</Price>
         </span>
         <Button
           content="Add To Cart"
