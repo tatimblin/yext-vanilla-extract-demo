@@ -68,3 +68,11 @@ export const text = recipe({
     },
   ],
 });
+
+export const heading = recipe({
+  variants: {
+    level: {
+      '2': text({weight: 'bold'})
+    }
+  }
+})
